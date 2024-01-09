@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var scopes = 5;
+    while (scopes > 0) {
+      document.write("Another scoop!<br>");
+      if (scopes >= 5) {
+        alert ("Eat faster, ice cream is going to melt!");
+      } else if (scopes < 3) {
+        alert( "Ice cream is running low!");
+      }
+      scopes = scopes - 1;
+    }
+    document.write("Scoops is end!");
+  </script>
+</body>
+</html>
