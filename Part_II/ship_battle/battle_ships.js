@@ -1,9 +1,11 @@
-var field = 8;
+var field = 7;
 var shipLenght = 3;
 var randomLocation = Math.ceil(Math.random()*(field-shipLenght-1));
 var location1 = randomLocation;
 var location2 = location1 + 1;
 var location3 = location1 + 2;
+
+console.log (randomLocation);
 
 var userQuery;
 var guess = 0;
