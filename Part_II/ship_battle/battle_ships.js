@@ -1,7 +1,7 @@
 var field = 8;
 var shipLenght = 3;
-var randomLocation = Math.floor(Math.random()*(field-shipLenght-1));
-var location1 = randomLocation + 1;
+var randomLocation = Math.ceil(Math.random()*(field-shipLenght-1));
+var location1 = randomLocation;
 var location2 = location1 + 1;
 var location3 = location1 + 2;
 
@@ -13,7 +13,7 @@ var isSink = false;
 while (isSink == false) {
   userQuery = prompt("Fire into enemy ship! write a number from 1 to " + field);
   console.log(isSink);
-    if ( userQuery < 0 || userQuery > field){
+    if ( userQuery < 1 || userQuery > field){
       alert (" Please put a valid number");
     } else {
       guess = guess + 1;
