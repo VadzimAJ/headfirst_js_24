@@ -49,12 +49,11 @@ function mostCostEffective (bubbleScores, costsArr, bestArr) {
   var bestCost = costsArr[bestArr[0]];
   var bestCostPosition = bestArr[0];
   for ( var i = 0; bestArr.length > i; i++){
-    console.log(costsArr[bestArr[i]]);
-    console.log(bestCost);
+    console.log("costArr = " + costsArr[bestArr[i]]);
+    console.log("BestCost = " + bestCost);
     if (costsArr[bestArr[i]] <bestCost) {
       bestCost = costsArr[bestArr[i]];
       bestCostPosition = bestArr[i];
-      console.log(bestArr.length);
     }
   }
   document.write("<br> Best cost on position : " + bestCostPosition + ". "  + " The most effective cost is " + bestCost);
