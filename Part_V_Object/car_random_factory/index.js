@@ -27,6 +27,8 @@ function makeCars () {
 
 function displayCar (car) {
   console.log ("You new car is a " + car.year + " " + car.make + " " + car.color + " " + car.model);
+
+  document.write ("You new car is a " + car.year + " " + car.make + " " + car.color + " " + car.model);
 }
 
 var carToSell = makeCars();
