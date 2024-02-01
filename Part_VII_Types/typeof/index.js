@@ -1,0 +1,25 @@
+var t1 = "asfaasd";
+var t2 = 123;
+var t3 = true;
+var t4 =  {};
+var t5 = [];
+var t6;
+var t7 =  {"dsf": 123};
+var t8 = ["dsf", 123];
+function t9 () {return "sdfsdf"};
+var t10 = null;
+var t11 = NaN;
+var t12 = 0/0;
+
+console.log(`{t1} consist '${t1}' its a ` + typeof t1);
+console.log(`{t2} consist '${t2}' its a ` + typeof t2);
+console.log(`{t3} consist '${t3}' its an ` + typeof t3);
+console.log(`{t4} consist '${t4}' its an ` +  typeof t4);
+console.log(`{t5} consist '${t5}' its an ` + typeof t5);
+console.log(`{t6} consist '${t6}' its an ` + typeof t6);
+console.log(`{t7} consist '${t7}' its an ` + typeof t7);
+console.log(`{t8} consist '${t8}' its an ` + typeof t8);
+console.log(`{t9} consist '${t9}' its an ` +  typeof t9);
+console.log(`{t10} consist '${t10}' its an ` + typeof t10);
+console.log(`{t11} consist '${t11}' its a ` + typeof t11);
+console.log(`{t12} consist '${t12}' its a ` + typeof t12);
