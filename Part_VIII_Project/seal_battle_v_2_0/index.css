@@ -1,3 +1,6 @@
+@import url('https://necolas.github.io/normalize.css/latest/normalize.css');
+
+
 html, body {
   height: 100%;
   margin: 0;
@@ -18,9 +21,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain; 
-  height: 100vh; 
-  width: 100vh;
-  display: flex;
+  height: 100vmin; 
+  width: 100vmin;
   justify-content: center;
   align-items: center;
 }
@@ -28,21 +30,24 @@ body {
 .massage-area{
   position: absolute;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  height: 2rem;
+  min-height: 2rem;
   width: 20rem;
-  background-color: aqua;
-  right: 75%;
-  top: 5%;
+  color: white;
+  background-color: rgb(37, 117, 117);
+  left: 0%;
+  top: 0%;
+  font-size: 1.5rem;
+  padding: 5px;
 }
 
 .board-container {
   position: relative;
-  height: 66.1%;
-  width: 66.1%;
+  height: 66.15%;
+  width: 66.15%;
   margin-top: .9%;
-  margin-right: .9%;
+  margin-right: .7%;
   
 }
 
@@ -52,6 +57,8 @@ table {
 }
 
 .tr {
+  position: relative;
+  opacity: .3;
   height: (100%)/7;
 }
 
@@ -66,10 +73,24 @@ table {
   align-items: center;
   border: 2px yellow solid;
   border-radius: 5px;
-  height: 5%;
-  min-width: 30%;
+  height: 2.5rem;
+  min-width: 12rem;
   top: 87%;
-  left: 70%;
+  right: 10%; /* Используйте right вместо left */
+  margin-right: 20px;
+  font-size: 1.5rem;
+}
+@media (max-width: 720px) {
+  .input-interfece{
+    height: 36px;
+  }
+}
+
+@media (max-width: 405px) {
+  .input-interfece{
+    width: 120px;
+    
+  }
 }
 
 .input-background {
@@ -88,6 +109,7 @@ table {
   width: 100%;
   bottom: 20%;
   top: 25%;
+  margin: 10px;
 }
 
 .input-form-input {
@@ -102,7 +124,13 @@ table {
 }
 .hit {
   background: url("./assets/ship.png") no-repeat center center;
+  background-size: contain; 
+  background-color: blue;
+  opacity: .9;
 }
 .miss {
   background: url("./assets/miss.png") no-repeat center center;
+  background-size: contain; 
+  background-color: red;
+  opacity: .9;
 }
