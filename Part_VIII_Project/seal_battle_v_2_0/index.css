@@ -57,13 +57,14 @@ table {
 }
 
 .tr {
-  position: relative;
-  opacity: .3;
-  height: (100%)/7;
+  
+  height: calc(100%)/7;
+  
 }
 
 .td {
-  width: (100%)/7;
+  width: calc(100%)/7;
+
 }
 
 .input-interfece {
@@ -123,14 +124,35 @@ table {
   margin-right: 5%;
 }
 .hit {
+  position: relative;
   background: url("./assets/ship.png") no-repeat center center;
-  background-size: contain; 
-  background-color: blue;
-  opacity: .9;
+  background-size: contain;
 }
+
+.hit::before {
+  content: "";
+  position: absolute; 
+  top: 0;
+  left: 0;
+  background-color: blue;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+}
+
 .miss {
+  position: relative;
   background: url("./assets/miss.png") no-repeat center center;
-  background-size: contain; 
+  background-size: contain;
+}
+
+.miss::before {
+  content: "";
+  position: absolute; 
+  top: 0;
+  left: 0;
   background-color: red;
-  opacity: .9;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
 }
