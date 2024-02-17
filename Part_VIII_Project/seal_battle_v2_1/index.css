@@ -1,0 +1,158 @@
+@import url('https://necolas.github.io/normalize.css/latest/normalize.css');
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  background-color: rgb(1, 5, 0);
+}
+
+.battleship-container { 
+  display: flex;
+  position: relative;
+  background-image: url('./assets/board.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; 
+  height: 100vmin; 
+  width: 100vmin;
+  justify-content: center;
+  align-items: center;
+}
+
+.massage-area{
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  min-height: 2rem;
+  width: 20rem;
+  color: white;
+  background-color: rgb(37, 117, 117);
+  left: 0%;
+  top: 0%;
+  font-size: 1.5rem;
+  padding: 5px;
+}
+
+.board-container {
+  position: relative;
+  height: 66.15%;
+  width: 66.15%;
+  margin-top: .9%;
+  margin-right: .7%;
+  
+}
+
+table {
+  height: 100%;
+  width: 100%;
+}
+
+.tr {
+  
+  height: calc(100%)/7;
+  
+}
+
+.td {
+  width: calc(100%)/7;
+
+}
+
+.input-interfece {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px yellow solid;
+  border-radius: 5px;
+  height: 2.5rem;
+  min-width: 12rem;
+  top: 87%;
+  right: 10%; /* Используйте right вместо left */
+  margin-right: 20px;
+  font-size: 1.5rem;
+}
+@media (max-width: 720px) {
+  .input-interfece{
+    height: 36px;
+  }
+}
+
+@media (max-width: 405px) {
+  .input-interfece{
+    width: 120px;
+    
+  }
+}
+
+.input-background {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: yellowgreen;
+  opacity: .5;
+}
+
+.input-form {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  bottom: 20%;
+  top: 25%;
+  margin: 10px;
+}
+
+.input-form-input {
+  margin-left: 5%;
+  max-width: 2rem;
+}
+
+.input-form-button{
+  background-color: green;
+  color: yellow;
+  margin-right: 5%;
+}
+.hit {
+  position: relative;
+  background: url("./assets/ship.png") no-repeat center center;
+  background-size: contain;
+}
+
+.hit::before {
+  content: "";
+  position: absolute; 
+  top: 0;
+  left: 0;
+  background-color: blue;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+}
+
+.miss {
+  position: relative;
+  background: url("./assets/miss.png") no-repeat center center;
+  background-size: contain;
+}
+
+.miss::before {
+  content: "";
+  position: absolute; 
+  top: 0;
+  left: 0;
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+}
