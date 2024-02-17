@@ -36,7 +36,7 @@ var model = {
         for (var i = 0; i < this.numShips; i++) {
             var ship = this.ships[i];
             var index = ship.locations.indexOf(guess);
-            if (index >= 0) {
+            if (index >= 0 && ship.hits[index] !== 'hit') {
               ship.hits[index] = 'hit';
               view.displayHit(guess);
               view.displayMessage("Hit!");
@@ -46,6 +46,10 @@ var model = {
                 console.log("Sinked ships is " + this.shipsSunk);
               }
               return true;
+            } else if ( ship.hits[index] === 'hit'){
+              console.log("You've already shot at this place before!");
+              view.displayMessage("You've already shot at this place before!");
+              return false;
             }
         }
           view.displayMiss(guess);
@@ -68,18 +72,21 @@ var model = {
     if (direction === 1) {
       row = Math.floor(Math.random() * this.boardSize);
       col = Math.floor(Math.random() * (this.boardSize - this.shipLength));
-
+      console.log("Create random posiion on " + row + " row, " + col + " col");
     }else {
       row = Math.floor(Math.random() *  (this.boardSize - this.shipLength));
       col = Math.floor(Math.random() * this.boardSize);
+      console.log("Create random position on " + row + " row, " + col + " col");
     }
 
     var newShipLocations = [];
     for (var i = 0; i < this.shipLength; i++) {
       if (direction === 1) {
         newShipLocations.push(row + "" + (col + i));
+        console.log("Create Arr with ships stats geuss at row " + row + ", col " + col + ". All guess is " + row + col )
       } else {
         newShipLocations.push((row + i) + "" + col);
+        console.log("else part code is glue row and col part into a " + row + col + ". newShipLoction is contains from a [" + newShipLocations  + "] elements");
       }
     }
     return newShipLocations;
@@ -89,8 +96,11 @@ var model = {
     for (var i = 0; i < this.numShips; i++) {
       do {
         locations = this.generateShip();
+        console.log(locations);
+        console.log("Complite arr cinsisct of the following elements " + locations);
       } while (this.collision (locations));
       this.ships[i].locations = locations;
+      console.log("while steps is " + locations);
     }
   },
   collision: function (locations) {
@@ -98,10 +108,12 @@ var model = {
       var ship = model.ships[i];
       for (var j = 0; j < locations.length; j++) {
         if (ship.locations.indexOf(locations[j])>= 0 ) {
+          console.log ("FAIL!!!! Collision check true is " + ship.locations + ". Random guess drop to the trash, because find collision on position " +  ship.locations.indexOf(locations[j]));
           return true;
         }
       }
     }
+    console.log ("collision check false is " + ship.locations + ". All right, collisons is not find") ;
     return false;
   }
 }
