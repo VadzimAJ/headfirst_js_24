@@ -36,7 +36,7 @@ var model = {
         for (var i = 0; i < this.numShips; i++) {
             var ship = this.ships[i];
             var index = ship.locations.indexOf(guess);
-            if (index >= 0) {
+            if (index >= 0 && ship.hits[index] !== 'hit') {
               ship.hits[index] = 'hit';
               view.displayHit(guess);
               view.displayMessage("Hit!");
@@ -46,6 +46,10 @@ var model = {
                 console.log("Sinked ships is " + this.shipsSunk);
               }
               return true;
+            } else if ( ship.hits[index] === 'hit'){
+              console.log("You've already shot at this place before!");
+              view.displayMessage("You've already shot at this place before!");
+              return false;
             }
         }
           view.displayMiss(guess);
