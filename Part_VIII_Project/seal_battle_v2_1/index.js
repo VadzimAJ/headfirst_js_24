@@ -123,6 +123,7 @@ var controller = {
   guesses: 0,
 
   processGuess: function (guess) {
+    console.log("! processGuess consist 'guess' - " + guess);
     var location = parseGuess(guess);
     if (location) {
       this.guesses++;
