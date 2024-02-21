@@ -19,6 +19,14 @@ function showAnswer (eventObj) {
 
   var image = eventObj.target;
   var name = image.id;
-  name = './assets/' + name + '.jpg';
-  image.src = name;
+  nameNormal = './assets/' + name + '.jpg';
+  image.src = nameNormal;
+  console.log("Handler target for " + image.src);
+
+  function blurImage () {
+    image.src = './assets/' + name + 'blur.jpg';
+  }
+
+  setTimeout(blurImage, 2000);
 }
+
