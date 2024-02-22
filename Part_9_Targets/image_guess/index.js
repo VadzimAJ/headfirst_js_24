@@ -23,10 +23,11 @@ function showAnswer (eventObj) {
   image.src = nameNormal;
   console.log("Handler target for " + image.src);
 
-  function blurImage () {
-    image.src = './assets/' + name + 'blur.jpg';
-  }
+  
 
-  setTimeout(blurImage, 2000);
+  setTimeout(blurImage, 2000, image, name);
 }
 
+function blurImage (image, name) {
+  image.src = './assets/' + name + 'blur.jpg';
+}
