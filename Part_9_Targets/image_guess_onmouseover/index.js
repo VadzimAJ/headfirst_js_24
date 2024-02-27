@@ -6,8 +6,9 @@ function init() {
 
   var images = document.getElementsByTagName("img");
   for (var i =0; i < images.length; i++) {
-    images[i].onclick = showAnswer;
-    console.log(images[i] + " add click ivent ")
+    images[i].onmouseover = showAnswer;
+    images[i].onmouseout = blurImage;
+    console.log(images[i] + " add onmouseover ivent ")
   };
   console.log(images);
   
@@ -22,12 +23,10 @@ function showAnswer (eventObj) {
   linkNormaliser = './assets/' + name + '.jpg';
   image.src = linkNormaliser;
   console.log("Handler target for " + image.src);
-
-  
-
-  setTimeout(blurImage, 2000, image, name);
 }
 
-function blurImage (image, name) {
+function blurImage (eventObj) {
+  var image = eventObj.target;
+  var name = image.id;
   image.src = './assets/' + name + 'blur.jpg';
 }

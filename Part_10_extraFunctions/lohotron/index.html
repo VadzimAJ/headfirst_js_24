@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lohotron Production Presents!</title>
+</head>
+<body>
+  <script>
+    var winner = function () {alert ("Winnner!")};
+    var loser = function () {alert ("Loser!")};
+
+    winner();
+
+    var a = winner;
+    var b = loser;
+    var c = loser;
+
+    a();
+    b();
+
+    c = a;
+    a  = b;
+    b = c;
+    c = a;
+    a = c;
+    a = b;
+    b = c;
+    a();
+
+  </script>
+</body>
+</html>

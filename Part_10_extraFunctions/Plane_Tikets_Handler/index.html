@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plane Tikets Handler</title>
+</head>
+<body>
+  <script>
+
+    var passagers = [
+      {name: "Jane Doloop", paid: true},
+      {name: "Dr. Evel", paid: true},
+      {name: "Sue Property", paid: false},
+      {name: "John Funcall", paid: true}
+    ];
+
+    var blackList = [
+      {name: "Sue Property"},
+      {name: "John Doue"}
+    ];
+
+
+    function tiketHandler (list){
+      if (list.length == 0){
+        return (console.log(list + " Arr is Empty!"));
+      } else {
+        passagersHandler(list);
+      }
+
+    }
+
+    var passagersHandler = function(list){
+      for (var i = 0; i < list.length; i++){
+          console.log("Passager " + list[i].name);
+          if (list[i].paid){
+            console.log("He is paid for tikets!")
+          } else {
+            console.log("He is not paid for tikets!")
+          };
+        }
+    }
+
+    tiketHandler(passagers);
+  </script>
+</body>
+</html>
