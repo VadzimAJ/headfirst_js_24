@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function sayIt(translator) {
+      var phrase = translator ("Hello");
+      alert (phrase);
+    }
+
+    function hawaiianTrnslator (word) {
+      if (word === "Hello") return "Aloha";
+      if (word === "Goodbuy") return "Aloha";
+    }
+
+    sayIt (hawaiianTrnslator);
+  </script>
+</body>
+</html>

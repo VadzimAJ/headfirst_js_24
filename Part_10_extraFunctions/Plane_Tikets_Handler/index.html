@@ -15,11 +15,6 @@
       {name: "John Funcall", paid: true}
     ];
 
-    var blackList = [
-      {name: "Sue Property"},
-      {name: "John Doue"}
-    ];
-
 
     function tiketHandler (list){
       if (list.length == 0){
@@ -33,13 +28,28 @@
     var passagersHandler = function(list){
       for (var i = 0; i < list.length; i++){
           console.log("Passager " + list[i].name);
-          if (list[i].paid){
+          isPaid(list, i);
+        }
+    }
+
+    var isPaid = function (list, i) {
+      if (list[i].paid){
             console.log("He is paid for tikets!")
           } else {
             console.log("He is not paid for tikets!")
           };
-        }
     }
+
+    function inBlackList (passagers) {
+      if (passagers.name.indexOf("Sue Property")){
+        return true;
+      } else {
+        return (console.log (passagers.name + " is Ban"));
+        }
+      
+    }
+
+    inBlackList(passagers);
 
     tiketHandler(passagers);
   </script>
