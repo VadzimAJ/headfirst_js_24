@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function fun (echo) {
+      console.log(echo);
+    }
+
+    fun("fun say hello");
+    function boo (anFunct) {
+      anFunct("boo says boo");
+    }
+
+    boo(fun);
+    console.log("console log says: '" + fun + "'");
+
+    fun (boo);
+
+    var moreFun = fun;
+    moreFun("Hello again");
+
+    function echoMaker() {
+      return fun;
+    }
+
+    var bigFun = echoMaker();
+    bigFun("Its there an echo?");
+  </script>
+</body>
+</html>
