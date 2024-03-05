@@ -49,15 +49,15 @@
 
     // }
 
-    function sortColaPrint(products, prop){
-      for (var i = 0; i < products.length; i++){
-        console.log("Drink name: " + products[i].name + ". Calories: " + products[i].calories + ". Color: " + products[i].color + ". Sold: " + products[i].sold);
+    function sortColaPrint(productsProp){
+      for (var i = 0; i < productsProp.length; i++){
+        console.log("Drink name: " + productsProp[i].name + ". Calories: " + productsProp[i].calories + ". Color: " + productsProp[i].color + ". Sold: " + productsProp[i].sold);
       }
     }
     
-    function pasagraphSortColaPrint (prop, productsProp) {
+    function pasagraphSortColaPrint (productsProp, prop) {
       console.log("products sort by " + prop  + ":");
-      products.sort((colaA, colaB) => compareCola(colaA, colaB, prop));
+      products.sort((propA, propB) => compareCola(propA, propB, prop));
       sortColaPrint(productsProp);
     }
 
@@ -73,10 +73,10 @@
       }
     }
 
-    pasagraphSortColaPrint("sold", products);
-    pasagraphSortColaPrint("name", products);
-    pasagraphSortColaPrint("calories", products);
-    pasagraphSortColaPrint("color", products);
+    pasagraphSortColaPrint(products, "sold");
+    pasagraphSortColaPrint(products, "name");
+    pasagraphSortColaPrint(products, "calories");
+    pasagraphSortColaPrint(products, "color");
 
     
   </script>
