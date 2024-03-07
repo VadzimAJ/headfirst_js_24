@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scope Example</title>
+</head>
+<body>
+  <script>
+    var justAVar = "I`m Golobal";
+
+    function whereAreYou() {
+      var justAVar = "I`m Local";
+
+
+      function inner() {
+        return justAVar;
+      }
+
+      return inner;
+    }
+
+    var innerFunction = whereAreYou();
+    var result = innerFunction();
+    console.log(result);
+  </script>
+</body>
+</html>
