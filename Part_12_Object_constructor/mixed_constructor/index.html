@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mixed Constructor</title>
+</head>
+<body>
+  <script>
+    function Dog (name, breed, weight) {
+      this.name = name;
+      this.breed = breed;
+      this.weight = weight;
+      this.bark = function () {
+        if (this.weight > 10){
+          return " say WOOF!";
+        } else {
+          return " say Yip!";
+        }
+      }
+    }
+
+    var fido = new Dog("Fido", "Mixied", 39, 23);
+    var fluffy = new Dog("Fluffy", "Poodle", 30);
+    var spot = new Dog("Spot", "Chihuahua", 9);
+    var dogs = [fido, fluffy, spot];
+    
+
+    for (var i = 0; i < dogs.length; i++) {
+      var size = "small";
+      if (dogs[i].weight > 10) {
+        size = "large";
+      }
+
+      console.log ("Dog: " + dogs[i].name
+                            + " is a " + size
+                            + " " + dogs[i].breed
+                            + dogs[i].bark());
+    }
+
+    function Car (params) {
+      this.make = params.make;
+      this.model = params.model;
+      this.year = params.year;
+      this.color = params.color;
+      this.passengers = params.passengers;
+      this.convertible = params.convertible;
+      this.mileage = params.mileage;
+      this.started = false;
+      this.start = function (){
+        this.started = true;
+      };
+      this.stop = function(){
+        this.started = false;
+      };
+      this.drive = function(){
+        if (this.started) {
+          console.log(this.make + " " + this.model + " goes zoom zoom!");
+        } else {
+          console.log("Sart you engine first.")
+        }
+      }
+    }
+
+      var chevyParams = {
+        make: "Chevy",
+        model: "Bell Air",
+        year: 1957,
+        color: "red",
+        passengers: 2,
+        convertible: false,
+        mileage: 1021
+      }
+    var chevy = new Car (chevyParams);
+
+    var cadiParams = {
+        make: "GM",
+        model: "Caddilac",
+        year: 1955,
+        color: "tan",
+        passengers: 5,
+        convertible: false,
+        mileage: 12892
+      }
+    var cadi = new Car (cadiParams);
+
+    var taxiParams = {
+        make: "Webvile motors",
+        model: "Taxi",
+        year: 1957,
+        color: "yellow",
+        passengers: 5,
+        convertible: false,
+        mileage: 281341
+      }
+    var taxi = new Car (taxiParams);
+
+    var fiatParams = {
+        make: "Fiat",
+        model: "500",
+        year: 1957,
+        color: "blue",
+        passengers: 5,
+        convertible: false,
+        mileage: 88000
+      }    
+    var fiat = new Car (fiatParams);
+
+    var cars = [chevy, cadi, taxi, fiat]
+
+    for (var i = 0; i < cars.length; i++) {
+      cars[i].start();
+      cars[i].drive();
+      cars[i].drive();
+      cars[i].stop();
+    }
+
+    var limoParams = {make: "Webville Motors",
+                      model: "limo",
+                      year: 1983,
+                      color: "black",
+                      passengers: 12,
+                      convertible: true,
+                      mileage: 21120
+                    };
+
+    var limo = new Car (limoParams);
+    var limoDog = new Dog ("Rheapsody In Blue", "Poodle", 40);
+
+    function dogCutcher (obj) {
+      if (obj instanceof Car) {
+        return " Car"
+      } else if (obj instanceof Dog){
+        return " Dog"
+      }
+    }
+    console.log(limo.make + " " + limo.model + " is a " + typeof limo + dogCutcher(limo));
+    console.log(limoDog.name + " is a " + typeof limoDog + dogCutcher(limoDog));
+
+
+    console.log(cars);
+    console.log(dogs);
+  </script>
+  
+</body>
+</html>
