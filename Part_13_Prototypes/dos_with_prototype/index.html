@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function Dog(name, breed, weight) {
+      this.name = name;
+      this.breed = breed;
+      this.weight = weight;
+    }
+
+    Dog.prototype.species = "Canine";
+
+    Dog.prototype.bark = function () {
+      if (this.weight > 25) {
+        console.log(this.name + " says Woof!");
+      } else {
+        console.log(this.name + " says Yip!");
+      }
+    }
+
+    Dog.prototype.run = function() {
+      console.log("Run!");
+    }
+
+    Dog.prototype.wag = function() {
+      console.log("Wag!");
+    }
+
+    var fido = new Dog("Fido", "Mixed", 38);
+    var fluffy = new Dog("Fluffy", "Poodle", 30);
+    var spot = new Dog("Spot", "Chihuahua", 10);
+    var megaSpot = new Dog("MegaSpot", "Chihuahua", 10);
+
+    megaSpot.bark = function () {
+      console.log(this.name + " says WOOF!");
+    }
+
+
+    function ShowDog(name, breed, weight, handler) {
+      Dog.call(this, name, breed, weight);
+      this.handler = handler;
+    };
+
+    ShowDog.prototype = new Dog ();
+    ShowDog.prototype.constructor = ShowDog;
+
+    ShowDog.prototype.league = "Webville";
+
+    ShowDog.prototype.stack = function() {
+      console.log("Stack");
+    };
+
+    ShowDog.prototype.bait = function() {
+      console.log("Bait");
+    };
+
+    ShowDog.prototype.gait = function(kind) {
+      console.log(kind + "ing");
+    };
+
+    var scoty = new ShowDog("Scotty", "Scottish Trttier", 15, "Cookie");
+
+
+    var dogs = [fido, fluffy, spot, megaSpot, scoty];
+
+    for (var i =0; i < dogs.length; i++) {
+      console.log( dogs[i].name.toUpperCase())
+      dogs[i].bark();
+      dogs[i].run();
+      dogs[i].wag();
+      if (dogs[i].bait){
+        dogs[i].bait();
+      };
+      if (dogs[i].gait){
+        dogs[i].gait("gait");
+      };
+      if (dogs[i] instanceof ShowDog) {
+        console.log(dogs[i].name + " is a Showdog");
+      } else {
+        console.log(dogs[i].name + " is a Dog");
+      };
+      console.log(dogs[i].name + " constructor is " + dogs[i].constructor);
+
+      console.log("")
+    }
+  </script>
+</body>
+
+</html>

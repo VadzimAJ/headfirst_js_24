@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoboPrototypes</title>
+</head>
+<body>
+  <script>
+    function Robot (name, year, owner) {
+      this.name = name;
+      this.year = year;
+      this.owner = owner;
+    }
+
+    Robot.prototype.maker = "Webvile Robotics inc";
+
+    Robot.prototype.speak = function(){
+      console.log("Bip!");
+    }
+    Robot.prototype.makeCoffe = function() {
+      console.log (this.name + " start making Coffee");
+    }
+
+    Robot.prototype.blinkLights = function(){
+      console.log(this.name + " blink his lights")
+    }
+
+    var robby = new Robot ("Robby", 1956, "Dr. Marbius");
+    var rosie = new Robot ("Roise", 1962, "Jorge jetson");
+
+    robby.onOffSwitch = true;
+    robby.makeCoffe = function() {
+      console.log(this.name + " fetching coffe from ZharPizza");
+    }
+
+
+    rosie.cleanHouse = function () {
+      console.log(this.name + " start clianing house");
+    }
+
+    Robot.prototype.createInfo = function () {
+      console.log(this.name + " was made by " + this.maker + " in " + this.year + " add is owner by " + this.owner);
+    }
+
+    robby.createInfo();
+    robby.makeCoffe();
+    robby.blinkLights();
+
+    rosie.createInfo();
+    rosie.cleanHouse();
+
+  </script>
+</body>
+</html>
