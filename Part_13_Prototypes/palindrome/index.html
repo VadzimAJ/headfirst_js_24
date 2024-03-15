@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palindrome checker</title>
+</head>
+
+<body>
+  <script>
+    String.prototype.palindrome = function () {
+
+      for (var i = 0, j = this.length-1; i < j; i++, j--) {
+
+        if (this[i] !== this[j]) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+
+    var sentence = ["asafa", "adda", "asdfasdgf", "froggorf"];
+
+    for (var i = 0; i < sentence.length; i++) {
+      var word = sentence[i];
+      if (!word.palindrome()) {
+        console.log(word + " is not palindrome!");
+      }
+    }
+  </script>
+</body>
+
+</html>
