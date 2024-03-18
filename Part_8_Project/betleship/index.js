@@ -7,7 +7,7 @@ class GameModel {
   }
 
 
-  generateBoard = function () {
+  generateBoard = () => {
     const table = document.createElement('table');
     table.className = 'table';
 
@@ -34,7 +34,7 @@ class GameModel {
     boardContainer.appendChild(table);
   }
 
-  maxShipLength = function () {
+  maxShipLength = () => {
     if (this.shipLength >= this.boardSize - 4 && this.shipLength <= 4) {
       console.log("Max Ship Length is normal:", this.shipLength);
       return true;
@@ -44,7 +44,7 @@ class GameModel {
     }
   }
 
-  generateShipsArr = function () {
+  generateShipsArr = () => {
     let arrShipLength = [];
 
     console.log("before creating ships arr is ", this.ships);
@@ -62,7 +62,7 @@ class GameModel {
     console.log("after creating arrShipLength arr is", arrShipLength);
   }
 
-  generateShipsLocation = function () {
+  generateShipsLocation = () => {
     let locations;
     var ships = this.generateShipsArr();
     console.log(this.ships);
@@ -75,17 +75,17 @@ class GameModel {
     }
   }
 
-  generateShips = function () {
+  generateShips = () => {
     let direction = (Math.floor(Math.random() * 2));
     let row, col;
 
-      if (direction === 1) {
-        row = Math.floor(Math.random() * this.boardSize);
-        col = Math.floor(Math.random() * (this.boardSize - this.shipLength));
-      } else {
-        row = Math.floor(Math.random() * (this.boardSize - this.shipLength));
-        col = Math.floor(Math.random() * this.boardSize);
-      }
+    if (direction === 1) {
+      row = Math.floor(Math.random() * this.boardSize);
+      col = Math.floor(Math.random() * (this.boardSize - this.shipLength));
+    } else {
+      row = Math.floor(Math.random() * (this.boardSize - this.shipLength));
+      col = Math.floor(Math.random() * this.boardSize);
+    }
 
     let newShipLocations = [];
 
@@ -97,32 +97,35 @@ class GameModel {
       }
 
     }
-    console.log("newShipsLocations is",newShipLocations);
+    console.log("newShipsLocations is", newShipLocations);
     return newShipLocations;
   }
 
 
 
-  collision = function (locations) {
+  collision = (locations) => {
     for (var i = 0; i < this.numberOfShips; i++) {
       let ship = this.ships[i];
-      for (let j = 0; j < locations.length; j++){
-        if (ship.locations.indexOf(locations[j]) >= 0 ) {
-          return true;
+      for (let j = 0; j < locations.length; j++) {
+        if (ship.locations.indexOf(locations[j + 1]) >= 0) {
+          if (ship.locations.indexOf(locations[j - 1]) >= 0) {
+            return true;
+          }
         }
       }
     }
+    console.log("array intersection, return false")
+    return false;
   }
 
 }
 
 
 function init() {
-  var newGame = new GameModel(7, 10, 4);
+  var newGame = new GameModel(7, 3, 3);
   newGame.generateBoard();
   newGame.generateShipsLocation();
   newGame.generateShips();
-  newGame.generateShipsArr();
 
   console.log("Board:", JSON.stringify(newGame, null, 2));
   console.log("Board Size:", newGame.boardSize);
