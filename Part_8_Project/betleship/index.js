@@ -1,3 +1,20 @@
+class View {
+  displayMassage = (msq) => {
+  let messageArea = document.getElementById("messageArea");
+  messageArea.innerHTML = msq;
+  }
+
+  displayHit = (location) => {
+    let cell = document.getElementById(location);
+    cell.setAttribute('class', 'hit');
+  }
+
+  displayMiss = (location) => {
+    let cell = document.getElementById(location);
+    cell.setAttribute('class', 'miss')
+  }
+}
+
 class GameModel {
   constructor(boardSize, numberOfShips, shipLength) {
     this.boardSize = boardSize;
@@ -104,28 +121,128 @@ class GameModel {
 
 
   collision = (locations) => {
-    for (var i = 0; i < this.numberOfShips; i++) {
+    for (let i = 0; i < this.numberOfShips; i++) {
       let ship = this.ships[i];
       for (let j = 0; j < locations.length; j++) {
         if (ship.locations.indexOf(locations[j + 1]) >= 0) {
-          if (ship.locations.indexOf(locations[j - 1]) >= 0) {
             return true;
           }
         }
-      }
     }
     console.log("array intersection, return false")
     return false;
   }
 
+  fire = (guess) => {
+    for (let i = 0; i < this.numberOfShips; i++) {
+      let ship = this.ships[i];
+      let index = ship.location.indexOf(guess);
+      if (index >= 0) {
+        ship.hits = 'hit';
+        view.displayHit(guess);
+        view.displayMassage("Hit!");
+        if (this.isShunk(ship)) {
+          view.displayMassage("You shunk a ship!");
+          this.shipShunk++;
+          console.log("Sinked ships is " + this.shipsSunk);
+        }
+        return true;
+      }
+    }
+  }
+
+  isShunk = (ship) => {
+    for (let i = 0; i < this.shipLength; i++) {
+      if (ship.hits[i] !== 'hit') {
+        return false;
+      }
+    }
+    return true;
+  }
+
+}
+
+class Controller {
+  constructor() {
+    this.guesses = 0;
+  }
+
+  processGuess =(guess) => {
+    let location = parseGuess(guess);
+    if (location) {
+      this.guesses++;
+        console.log("Number of shoot " + guesses);
+      let hit = GameModel.fire(location);
+      if (hit && GameModel.shipsSunk === GameModel.numShips) {
+        view.displayMessage ("You sank all my battleships, in " + guesses + " guesses");
+      }
+    }
+  }
+}
+
+parseGuess = (guess) => {
+  let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+
+  if (guess === null || guess.length !== 2) {
+    alert ("Data is fail!")
+  } else {
+    firstChar = guess.charAt(0).toUpperCase();
+    let row = alphabet.indexOf(firstChar);
+    let column = guess.charAt(1);
+
+    if (isNaN(row) || isNaN(column)) {
+      alert ("That isn`t on the board.")
+    } else if (row < 0 || row >= GameModel.boardSize || 
+                column < 0 || column >= GameModel.boardSize) {
+                  alert(" That off the board!");
+      } else {
+        return row + column;
+      }
+  }
+  return null;
 }
 
 
-function init() {
-  var newGame = new GameModel(7, 3, 3);
-  newGame.generateBoard();
-  newGame.generateShipsLocation();
-  newGame.generateShips();
+handleKeyPress = (e) => {
+  var fireButton = document.getElementById('fire-button');
+  if (e.keyCode === 13) {
+    fireButton.click();
+    return false;
+  }
+}
+hanblerFireButton = () => {
+  var guessInput = document.getElementById("guess-input");
+  var guess = guessInput.value;
+  controller.processGuess(guess);
+  guessInput.value = "";
+}
+
+
+async function init() {
+  try {
+    var newGame = new GameModel(7, 3, 3);
+    await newGame.generateBoard();
+    console.log ("BOARD IS GENERETED");
+
+    await newGame.generateShipsLocation();
+    console.log ("START SHIP LOCATIONS IS GENERETED");
+
+    await newGame.generateShips();
+    console.log ("ALL SHIP ARE GENERETED");
+
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+  
+  
+
+  var fireButton = document.getElementById('fire-button');
+  fireButton.onclick = hanblerFireButton;
+
+  var guessInput = document.getElementById("guess-input");
+  guessInput.onkeydown = handleKeyPress;
+
+  
 
   console.log("Board:", JSON.stringify(newGame, null, 2));
   console.log("Board Size:", newGame.boardSize);
@@ -136,4 +253,6 @@ function init() {
 }
 
 window.onload = init;
+
+console.log(init());
 

@@ -1,0 +1,334 @@
+[33mcommit 9104730f097b13f2ba0355d887889767942decc1[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Tue Mar 19 18:09:40 2024 +0300
+
+    feat: meke some changes to the code. The project in pending, I'm starting to stady the lessons of the  ITincubator shool
+
+[33mcommit 429c98f9346a65ebb195834af5a2c4961f30199d[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Mon Mar 18 18:07:54 2024 +0300
+
+    feat: complite gameModel
+
+[33mcommit 64acf2eb6fb7dce524b28ca95e0ebc1f4d470761[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Sun Mar 17 14:01:48 2024 +0300
+
+    feat: start independent work on the battleships project
+
+[33mcommit b3e695ff0cbe8e46e6c37aa1304d3ac0bbab987f[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Fri Mar 15 03:52:20 2024 +0300
+
+    feat: complte prototype lesson. Comlite learning book 'Head First. Learning Java Script Programming'
+
+[33mcommit ed0a31bb4d7c514da6231c2a99b0ece2a0e9ad7a[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Fri Mar 15 01:49:34 2024 +0300
+
+    feat: create ShowDog class from Dog class prototype
+
+[33mcommit 044f2f9cd5fd072862af4c7ff80d803077136f63[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Tue Mar 12 21:26:17 2024 +0300
+
+    feat: comlite Part_12
+
+[33mcommit 3687f635a249b0175ebfce5a3721e640ecb1456a[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Mon Mar 11 22:10:18 2024 +0300
+
+    feat: comlite car constructor lesson 'param objects'
+
+[33mcommit 14721701031b9ab07ced677d25161e5f234524b6[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Mon Mar 11 16:52:03 2024 +0300
+
+    feat: comlite dog constructor and start coffe machine project
+
+[33mcommit 2ffda105a540612e695cce50ed83fcb2865de8fc[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Mon Mar 11 13:55:38 2024 +0300
+
+    feat: complite strange anonim function lesson
+
+[33mcommit add710abbbd0eb766f0a147fa35a364d4c1f71b3[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Sun Mar 10 23:40:46 2024 +0300
+
+    feat: complite 'anon functions, soupe and closure' lesson
+
+[33mcommit 421074a168e769b49062f5d0d1e64b0cc8af3d9e[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Sun Mar 10 13:04:49 2024 +0300
+
+    feat: make newWaveCounter to check function closure
+
+[33mcommit a10bb07116141a8652e8c644c650b0b0bdbf4541[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Thu Mar 7 18:24:18 2024 +0300
+
+    feat: start scpe lesson project
+
+[33mcommit 061559faa491734f25c26e62c5d37dcee25c2352[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Tue Mar 5 19:45:50 2024 +0300
+
+    feat: complite web_cola lesson
+
+[33mcommit 7f7968f7ee94f234a8fbd8659358b7554e21aff6[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Mon Mar 4 21:00:30 2024 +0300
+
+    feat: complite higher-order functions lesson
+
+[33mcommit a3e3abe99e6fbeab6f741e86f01fa621d58562b3[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Fri Mar 1 08:41:59 2024 +0300
+
+    feat: comlite 'Plane tikets handler' and 'mixed function' lessons
+
+[33mcommit 54901ec8e842f9ebaccb669c2b4cd59f302fd39f[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Thu Feb 29 19:04:02 2024 +0300
+
+    feat: complite hide-order examle
+
+[33mcommit 98e701aee47746b939b442bd3fbf506ce5f19d5c[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Tue Feb 27 19:15:15 2024 +0300
+
+    feat: start passagers cheker project
+
+[33mcommit 15fac902b6e5d7eaa4d3d7a3e6aace516a16d14e[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Thu Feb 22 18:22:37 2024 +0300
+
+    feat: separate reblur function
+
+[33mcommit d6f9b99bbdf9d17e2b4863fde5f298e2d638cffb[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Thu Feb 22 13:53:28 2024 +0300
+
+    refactor: refactor of folders naming
+
+[33mcommit d4a26f815119240b4155e765c4bdc3316ae6933b[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Wed Feb 21 19:10:28 2024 +0300
+
+    feat: add atotimer chager image to blur
+
+[33mcommit 360a618d3699814ec875ab74f83ab40a8a4980ca[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Wed Feb 21 18:39:59 2024 +0300
+
+    feat: creat universal target handler
+
+[33mcommit 17c33eb84e5c0126a3a0b8e8295475cc93869f19[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Wed Feb 21 15:09:36 2024 +0300
+
+    feat: add new images into project
+
+[33mcommit 223a5ca16a5e6c07ff819026cc9e83b711e08ff7[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Mon Feb 19 19:43:51 2024 +0300
+
+    feat: create
+    made an explanation of how the code works in the console log
+
+[33mcommit dafe3eb0590e5eb9b2c9b6c57eb27e2d760fa419[m
+Merge: 94245d0 c54a641
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Sun Feb 18 23:31:52 2024 +0300
+
+    Merge branch 'main' of https://github.com/VadzimAJ/headfirst_js_24
+
+[33mcommit 94245d0eb1d204d01cc61d5d0c128b4b16f9f329[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Sat Feb 17 22:12:57 2024 +0300
+
+    feat: create test console log tasks foe code
+
+[33mcommit c54a641d5c6456acfa6542f5ceb1e03d91aee565[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Sat Feb 17 22:12:57 2024 +0300
+
+    fix: fixed a repeat shoot exeption
+
+[33mcommit d9ff18c8b98097c0e0ffc687d6c11cdb075721d8[m
+Merge: 3b3ebc1 d54049f
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Sat Feb 17 17:14:21 2024 +0300
+
+    feat: start seal_battle project v.2.1
+
+[33mcommit 3b3ebc122b7bfb5818f4da85afebfa9938828d46[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Sat Feb 17 17:02:47 2024 +0300
+
+    feat: complite first project lesson
+
+[33mcommit d54049f11a485d9a159242a4cde5fa2f83e3b0e6[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Sat Feb 17 17:02:47 2024 +0300
+
+    feat: complite ranomiser of guesse ships positions
+
+[33mcommit ced8127ee6687eca8d9904f476e8c7f5de32b323[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Wed Feb 14 16:31:16 2024 +0300
+
+    feat: complite controller function
+
+[33mcommit 174de05fa86908f5153175843dc8b42bce5dbf22[m
+Author: Vadzim Anishchanka <vadzim.anishchanka.j@gmail.com>
+Date:   Wed Feb 7 08:35:04 2024 +0300
+
+    feat: complite of elemet leyout
+
+[33mcommit c162e3ed61d5e30592c6de08e055c6b061e15207[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Tue Feb 6 11:24:16 2024 +0300
+
+    feat: create logic of displaying ships and miss points
+
+[33mcommit e9995bc19d1caa68ae887e1bd7e76761e3cbdc1a[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Thu Feb 1 09:12:13 2024 +0300
+
+    feat: start battle-ship learning project
+
+[33mcommit 933a9139beaa0d6a180691c71ef2b42c169971ee[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Thu Feb 1 04:14:49 2024 +0300
+
+    feat: complite typing first constructor code
+
+[33mcommit 3c36fa4e116b1910d1d6a91537b02ddf8aea5236[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Thu Feb 1 03:37:23 2024 +0300
+
+    feat: complite phone-number-checker task
+
+[33mcommit 401d394a11ef55f89043b47135dfe2f2a1c3f613[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Thu Jan 25 18:57:29 2024 +0300
+
+    feat: add code into funtion init
+
+[33mcommit 09c74ffa92aef13469d013347bbff5124f5b1a82[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Thu Jan 25 18:02:28 2024 +0300
+
+    feat: complite DOM lesson
+
+[33mcommit 2782d0165bce38e95de0e93af1f911cce429f9a3[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Mon Jan 22 13:45:55 2024 +0300
+
+    feat: add to functional_car metod addFuel and param fuel
+
+[33mcommit b17eab3eb322795eb4431442610634e52e48ed89[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Tue Jan 16 12:33:48 2024 +0300
+
+    feat: rewrote random car factory lesson
+
+[33mcommit 986af635265ea6d2af64579200cf3c6dd71d1182[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Tue Jan 16 09:54:41 2024 +0300
+
+    feat: add new cars into project
+
+[33mcommit 87832971a67e23ea76473cc16058efb138b4f0ca[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Tue Jan 16 09:35:44 2024 +0300
+
+    feat: rewright taxi lesson
+
+[33mcommit f4935eb4ba4a47d362df2623317e2a57adfd4079[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Sat Jan 13 10:47:25 2024 +0300
+
+    feat: complite console.log hendler into bubble_function project
+
+[33mcommit 6e461caeeaa5a8a3a09d3c490b1fb3e054090de7[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Sat Jan 13 10:44:53 2024 +0300
+
+    fix: fix cost hendler
+
+[33mcommit bb28af6b3213d8e260d1328e96825c2b02791d9f[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Sat Jan 13 09:45:42 2024 +0300
+
+    feat: comlite refactor bubble code into funtion paradigme
+
+[33mcommit b3633a5262e0ac8e88ab9862b7390ee1b38ee446[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Thu Jan 11 11:34:23 2024 +0300
+
+    feat: make a consle.log discription how code is work
+
+[33mcommit 25f2d0ce833b5560cd248769a0cd7bad168feb42[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Thu Jan 11 06:39:20 2024 +0300
+
+    mend
+    
+     feat: rewrote strange factorial code and run it
+
+[33mcommit 9e6bae1d8b0c97dfadd6603337ca856f873ab9d1[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Wed Jan 10 21:56:29 2024 +0300
+
+    feat: rewrite strange factorial code and run it
+
+[33mcommit ad494df168bd92d8929d1f270f622cc832e022f1[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Wed Jan 10 04:27:43 2024 +0300
+
+    feat: add console debug
+
+[33mcommit 4e5aff6c8cd2ffa0192d074232dc3149319746a8[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Wed Jan 10 04:17:25 2024 +0300
+
+    fix: convert randomaser from ceil
+
+[33mcommit b99a82f41c26c7cc708b9522790e530fa3b687c3[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Tue Jan 9 20:13:39 2024 +0300
+
+    fix: fix battleship loop
+
+[33mcommit b109f1ac9bf21663b326ebd75e5c808cd67b68a3[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Tue Jan 9 10:26:52 2024 +0300
+
+    feat: start battleship lesson
+
+[33mcommit 4e1c96ce2952b249ced1eb5827dd4788ef31cab7[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Tue Jan 9 06:57:05 2024 +0300
+
+    feat: create js file for the  bottle song lesson
+
+[33mcommit 5cfddbdd62270326c95411451e0b3ccc24c7d614[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Tue Jan 9 05:52:21 2024 +0300
+
+    feat: complite ice bottle song lesson
+
+[33mcommit ffb930f0d68b026a61d0d68924053362e310d9d0[m
+Author: VadzimAJ <vadzim.anishchanka.j@gmail.com>
+Date:   Tue Jan 9 05:25:37 2024 +0300
+
+    feat: complite ice cream lesson
+
+[33mcommit c70b838ca3f2b5f18306bedef24325e3446177e4[m
+Author: Vadim Anishchenko <112694696+VadzimAJ@users.noreply.github.com>
+Date:   Mon Jan 8 11:55:53 2024 +0300
+
+    init: start Head First learninig project
